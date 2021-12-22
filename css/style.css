@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+*{
+    font-family: 'Public Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav-btn-round{
+    border-radius: 18px !important;
+}
+.background-linear{
+    background-image: linear-gradient(to right,hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+}
+button:active{
+    outline: none;
+}
+.nav-fixed{
+    position: fixed;
+    width: 100%;
+    background: #ffffff8c !important;
+    backdrop-filter: blur(8px) contrast(150%) !important;
+    z-index: 3000;
+}
+.bg-img-f-section{
+    background-image: url(../images/bg-intro-desktop.svg);
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+.con-height{
+    background:white !important;
+    height: 92vh !important;
+}
+.laptop-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    height: 100vh;
+    margin-left: 140px !important;
+}
+.back-second-section{
+    background-color:#f7f7f7 !important;
+}
+.font-size-card{
+    font-size: 15px;
+}
+.margin-nav-btn{
+    margin-right: 5% ;
+}
+.f-size-name{
+    font-size: 10px !important;
+}
+.title-text{
+    font-size: 21px;
+}
+.para-text{
+    font-size: 14px;
+}
+.bg-final-color{
+    background-color: hsl(233, 26%, 24%);
+}
+.svg-color{
+    filter: invert(100%) sepia(4%) saturate(7500%) hue-rotate(224deg) brightness(121%) contrast(113%);
+}
+.final-address-second{
+    display: flex ;
+    justify-content: end;
+}
+.final-btn-address{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.icon-final-address{
+    display: flex;
+    justify-content:space-evenly;
+}
+.current{
+    transition: 0.8s;
+}
+/* .current:hover{
+  color: black !important;
+  background-color: #f7f7f7c2;
+  border-radius: 10px;
+} */
+.img-h{
+    transition: 0.5s;
+}
+.img-h:hover{
+    transform: scale(1.01);
+}
+.img-h-card{
+    transition: 0.5s;
+}
+.img-h-card:hover{
+    transform: scale(1.03);
+    /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+
+}
+.scroll-to-top{
+    bottom: 50px;
+    right: 50px;
+    background-image: linear-gradient(to right,hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+
+}
+
+.ani-delay-1{
+    animation-delay: 0.5s;
+}
+
+.ani-delay-2{
+    animation-delay: 1s;
+}
+
+.ani-delay-3{
+    animation-delay: 1.5s;
+}
+
+.ani-delay-4{
+    animation-delay: 2s;
+}
+
+.ani-delay-5{
+    animation-delay: 2.5s;
+}
+.link-tag{
+    text-decoration: none;
+}
+
+.active-nav{
+    border-bottom: 3px solid black;
+}
+
+@media screen and (max-width:1200px) {
+    
+}
+
+@media screen and (max-width:768px) {
+    .bg-img-f-section{
+        background-image: url(../images/bg-intro-desktop.svg);
+        width: 100%;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-size: contain;
+        
+    }
+    .i-phone-row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .laptop-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        height: 0 !important;
+        padding-top: 30px;
+        margin-left: 10px !important;
+    }
+    .i-pad-second{
+        margin-top: 1% !important;
+        margin-left: -1%;
+        text-align: center;
+    }
+    .con-height {
+        background: white !important;
+        height: 116vh !important;
+    }
+    .phone-card{
+        padding-bottom: 0px !important;
+        margin-bottom: 10px !important;
+        text-align: center;
+    }
+    .margin-b-phone{
+        margin-bottom: 55px !important;
+    }
+    .back-second-section {
+        background-color: #f7f7f7 !important;
+        height: 23.8% !important;
+    }
+    .text-phone-center{
+        width: 100%;
+        text-align: center;
+    }
+    .card-t-center{
+        text-align: center !important;
+    }
+    .center-i-pad{
+        display: flex;
+        justify-content: center;
+    }
+    .image-s-width{
+        width: 30rem !important;
+    }
+    .margin-b-final{
+        margin-bottom: 0;
+    }
+   
+}
+
+@media screen and (max-width:576px) {
+    .bg-img-f-section {
+        background-image: url(../images/bg-intro-mobile.svg);
+        width: 100%;
+        background-repeat: no-repeat;
+        height: 88vh;
+        background-size: contain;
+    }
+    .phone-nav-icon-left{
+        margin-left: 10px !important;
+    }
+    .laptop-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        height: 0 !important;
+        padding-top: 30px;
+        margin-left: 10px !important;
+    }
+    .text-phone-center{
+        width: 100%;
+        text-align: center;
+    }
+    .con-height {
+        background: white !important;
+        height: 116vh !important;
+    }
+    .i-pad-second {
+        margin-top: 3% !important;
+        margin-left: -1%;
+        text-align: center;
+    }
+    .back-second-section {
+        background-color: #f7f7f7 !important;
+        height: 42.6% !important;
+    }
+    .margin-b-phone{
+        margin-bottom: 18px !important;
+    }
+    .card-t-center {
+        text-align: center !important;
+        margin-top: -20px !important;
+    }
+    .s-m-bottom{
+        margin-bottom: 50px ;
+    }
+    .s-card-bottom{
+        margin-bottom: 30px;
+    }
+    .image-s-width{
+        width: 23rem !important;
+    }
+    .final-address{
+        text-align: center;
+    }
+    .final-img-margin{
+        margin: 0px !important;
+        margin-top: 20px !important;
+    }
+    .final-address-second {
+        display: flex;
+        justify-content: center;
+        line-height: 35px;
+    }
+    .final-address-margin-top{
+        margin: 0px !important;
+        text-align: center;
+        padding-top: 0px !important;
+    }
+    .final-btn-address {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .margin-top-final-address{
+        margin-top: 35px !important;
+    }
+    .icon-final-address {
+        display: flex;
+        justify-content: center;
+    }
+    .icon-m-right{
+        margin-right: 12px !important;
+        margin-left: 11px !important;
+    }
+   
+}

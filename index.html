@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<link rel = "icon" href="images/icon-bank.png" type="image/icon type">
+
+<div class="loader-container" style="z-index: 4500;">
+    <div class="loader"></div>
+</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/fontawesomepro/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Bank Payment</title>
+    <style>
+       .loader-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 2000;
+      }
+      .loader {
+        color: green;
+        font-size: 20px;
+        margin: 100px auto;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        position: relative;
+        text-indent: -9999em;
+        -webkit-animation: load4 1.3s infinite linear;
+        animation: load4 1.3s infinite linear;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+      @-webkit-keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+@keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <!-- NavBar -->
+    <div class="container-fluid" id="one">
+        <div class="row mb-5 pb-3">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white nav-fixed header animate__animated">
+              <div class="container-fluid">
+                <a class="navbar-brand ms-5 phone-nav-icon-left" href="#">
+                  <img src="images/logo.svg" alt="">
+                </a>
+                <button class="navbar-toggler"  type="button" id="parentBtn" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="far fa-bars" id="btnClose"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                      <a class="nav-link mx-3 current active-nav" aria-current="page" href="#one" id="home">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link mx-3 current" href="#four" id="contact">Contact</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link mx-3 current" href="#two" id="about">About</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link mx-3 current " href="#three" id="blog">Blog</a>
+                    </li><li class="nav-item ">
+                      <a class="nav-link mx-3 current " href="#" id="carrers">Carrers</a>
+                    </li>
+                  </ul>
+                  <a type="button" id="upBtn" class="btn background-linear rounded-3 nav-btn-round text-white margin-nav-btn" href="#">Request Invite</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+    </div>
+   
+
+      <!-- first Section -->
+       <div class="container-fluid con-height" >
+        <div class="row i-phone-row">
+          <div class="col-12 col-lg-6 wow animate__fadeIn ani-delay-1">
+            <div class="ms-5 laptop-text">
+              <h1 class="mb-3 text-phone-center">Next Generation <br class="d-block d-lg-block d-md-none">digital banking</h1>
+              <p class="mb-4 text-phone-center">Take your financial life online. Your Easybank account <br class="d-block d-lg-block d-md-none">will be a one-stop for spending, saving <br class="d-block d-lg-block d-md-none">budgeting, investing, and much more.</p>
+              <div class="text-phone-center">
+                <a type="button" class="btn background-linear rounded-3 nav-btn-round text-white " href="#">Request Invite</a>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 p-0 i-phone-text  wow animate__fadeIn ani-delay-2">
+            <div class="bg-img-f-section">
+              <img src="images/image-mockups.png" class="img-fluid img-h" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- second Section -->
+      <div class="container-fluid back-second-section" id="two">
+        <div class="container">
+          <div class="row">
+            <div class="col-12  wow animate__fadeIn ani-delay-2">
+              <div class="mt-5 pt-4 i-pad-second">
+                <h1 class="mb-4">Why Choose Easybank ?</h1>
+                <p>We leverage open banking to turn your bank account into your financial hub. <br class="d-block d-md-none d-lg-block">Control your finances like never before.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5 pt-2" id="two">
+            <div class="col-12 col-lg-3 s-m-bottom  wow animate__fadeIn ani-delay-1">
+              <div class="mb-5 pb-5 phone-card img-h-card">
+                <img src="images/icon-online.svg" alt="">
+                <h3 class="my-4">Online Banking</h3>
+                <p class="font-size-card">Our modern web and mobile <br>applications allow you to keep track of your finances wherever you <br>are in the world.</p>
+              </div>
+            </div>
+            <hr class="d-none d-md-block d-lg-none">
+            <div class="col-12 col-lg-3 s-m-bottom  wow animate__fadeIn ani-delay-2">
+              <div class="mb-5 pb-5 phone-card img-h-card">
+                <img src="images/icon-budgeting.svg" alt="">
+                <h3 class="my-4">Simple Budgeting</h3>
+                <p class="font-size-card">See exactly where your money <br>goes each month. Receive notifications when you're close to hitting your limits.</p>
+              </div>
+            </div>
+            <hr class="d-none d-md-block d-lg-none">
+
+            <div class="col-12 col-lg-3 s-m-bottom  wow animate__fadeIn ani-delay-3">
+              <div class="mb-5 pb-5 phone-card img-h-card">
+                <img src="images/icon-onboarding.svg" alt="">
+                <h3 class="my-4">Fast Onboarding</h3>
+                <p class="font-size-card">We don't do branches. Open your <br class="d-block d-md-none d-lg-block">account in minutes online and start <br> taking control of your finances <br>right away.</p>
+              </div>
+            </div>
+            <hr class="d-none d-md-block d-lg-none">
+
+            <div class="col-12 col-lg-3 s-m-bottom  wow animate__fadeIn ani-delay-4">
+              <div class="mb-5 pb-5 phone-card img-h-card margin-b-phone">
+                <img src="images/icon-api.svg" alt="">
+                <h3 class="my-4">Open Api</h3>
+                <p class="font-size-card">Manage  your savings, investments. <br class="d-block d-md-none d-lg-block">pension, and much more from one <br>account. Tracking your money has <br>never been easier.</p>
+              </div>
+            </div>
+            <hr class="d-none d-md-block d-lg-none margin-b-final">
+
+          </div>
+        </div>
+          
+      </div>
+
+      <!-- Third Section -->
+      <div class="container" id="three">
+        <div class="row">
+          <div class="col-12  wow animate__fadeIn ani-delay-1">
+            <div class="">
+              <h1 class="mt-5 pt-5 mb-5 card-t-center">Last Articles</h1>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row mb-5 pb-5" id="three">
+          <div class="colz-12 col-lg-3 s-card-bottom  wow animate__fadeIn ani-delay-2">
+            <div class="center-i-pad img-h-card">
+              <div class="card image-s-width" style="width: 16rem;">
+                <img src="images/image-currency.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title f-size-name">By Claire Robinson</p>
+                  <h4 class="card-text fw-bold title-text">Receive money in any <br class="d-none d-md-none d-lg-block">currency with no fees</h4>
+                  <p class="para-text">The world is getting smaller and <br class="d-none d-md-none d-lg-block">we're becoming more mobile. So <br class="d-none d-md-none d-lg-block">why should you be forced to only <br class="d-none d-md-none d-lg-block">receive money in a single...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="d-none d-lg-none d-md-block">
+          <div class="col-12 col-lg-3 s-card-bottom  wow animate__fadeIn ani-delay-3">
+            <div class="center-i-pad img-h-card">
+              <div class="card image-s-width" style="width: 16rem;">
+                <img src="images/image-restaurant.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title f-size-name">By Wilson Hutton</p>
+                  <h4 class="card-text fw-bold title-text">Treat yourself without <br class="d-none d-md-none d-lg-block">worrying about money</h4>
+                  <p class="para-text">Our simple budgeting feature <br class="d-none d-md-none d-lg-block">allows you to separate out your spending and set realistic limits <br class="d-none d-md-none d-lg-block">each month. That means you...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="d-none d-lg-none d-md-block">
+
+          <div class="col-12 col-lg-3 s-card-bottom  wow animate__fadeIn ani-delay-4">
+            <div class="center-i-pad img-h-card">
+              <div class="card image-s-width" style="width: 16rem;">
+                <img src="images/image-plane.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title f-size-name">By Wilson Hutton</p>
+                  <h4 class="card-text fw-bold title-text">Take your Easybank card <br class="d-none d-md-none d-lg-block">wherever you go</h4>
+                  <p class="para-text">We want you to enjoy your travels. <br class="d-none d-md-none d-lg-block">This is why we don't charge any <br class="d-none d-md-none d-lg-block">fees on purchases while you're abroad. We'll even show you...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="d-none d-lg-none d-md-block">
+
+          <div class="col-12 col-lg-3 s-card-bottom  wow animate__fadeIn ani-delay-5">
+            <div class="center-i-pad img-h-card">
+              <div class="card image-s-width" style="width: 16rem;">
+                <img src="images/image-confetti.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title f-size-name">By Claire Robinson</p>
+                  <h4 class="card-text fw-bold title-text">Our invite-only Beta <br class="d-none d-md-none d-lg-block">accounts are now live!</h4>
+                  <p class="para-text">After a lot of hard work by the <br class="d-none d-md-none d-lg-block">whole team, we're excited to lauch <br class="d-none d-md-none d-lg-block">our closed beta. It's easy to request <br class="d-none d-md-none d-lg-block">an invite through the site...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="d-none d-lg-none d-md-block">
+
+        </div>
+      </div>
+
+      <div class="container-fluid bg-final-color" >
+        <div class="container  wow animate__fadeIn ani-delay-2">
+          <div class="row">
+            <div class="col-12 col-lg-2 col-md-2">
+              <div class="final-address">
+                <img src="images/logo.svg" class="img-fluid mb-5 svg-color mt-5 final-img-margin" alt="">
+                <div class="icon-final-address mb-5 mt-5 final-img-margin">
+                  <i class="fab fa-facebook-square text-white icon-m-right"></i>
+                  <i class="fab fa-youtube text-white icon-m-right"></i>
+                  <i class="fab fa-twitter text-white icon-m-right"></i>
+                  <i class="fab fa-pinterest text-white icon-m-right"></i>
+                  <i class="fab fa-instagram text-white icon-m-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-2 col-md-2 final-address-second">
+              <div class="mt-5 pt-3 final-address-margin-top margin-top-final-address">
+                <a href="#one" class="link-tag">
+                  <p class="text-white final-address-margin-top">About Us</p>
+                </a>
+                <a href="#four" class="link-tag">
+                  <p class="text-white final-address-margin-top">Contact Us</p>
+                </a>
+                <a href="#three" class="link-tag">
+                  <p class="text-white final-address-margin-top">Blog</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-2 col-md-3 final-address-second" id="four">
+              <div class="mt-5 pt-3 final-address-margin-top">
+                <a href="#" class="link-tag">
+                  <p class="text-white final-address-margin-top">Carrers</p>
+                </a>
+
+                <a href="#" class="link-tag">
+                  <p class="text-white final-address-margin-top">Support</p>
+                </a>
+
+                <a href="#" class="link-tag">
+                  <p class="text-white final-address-margin-top">Privacy Policy</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6 col-md-5">
+              <div class="final-btn-address mt-5 pt-3 ">
+                <a type="button" class="me-0 mb-5 btn background-linear rounded-3 nav-btn-round text-white margin-nav-btn" href="#">Request Invite</a>
+                <p class="text-white">&#9400; Easybank. All Right Reserved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#one" class="btn btn-primary position-fixed scroll-to-top animate__animated " style="display: none;">
+        <i class="fas fa-angle-double-up"></i>
+      </a>
+  
+    <script src="node_modules/bootstrap/dist/js/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="node_modules/WOW-master/dist/wow.min.js"></script>
+    <script src="js/style.js"></script>
+</body>
+</html>
